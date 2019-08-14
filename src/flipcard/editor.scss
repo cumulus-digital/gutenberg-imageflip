@@ -1,0 +1,29 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-block-cmls-block-vflipcard  {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+
+	perspective: 1000px;
+
+	.vflipcard-flipper {
+		display: block;
+		position: relative;
+		z-index: 2;
+		margin: 0 auto -.5em;
+		padding: .5em .75em;
+		background: #ddd;
+		color: #000;
+		border-radius: 4px;
+	}
+
+	&.vflipcard-show-back .vflipcard-container {
+		transform: rotateY(180deg);
+	}
+
+}
