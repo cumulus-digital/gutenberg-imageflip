@@ -33,7 +33,7 @@ const { withInstanceId } = wp.compose;
  */
 registerBlockType( 'cmls/block-vflipcard', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: 'ImageFlip', // Block title.
+	title: 'CardFlip', // Block title.
 	icon: 'format-gallery', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
 	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	keywords: [
@@ -62,7 +62,7 @@ registerBlockType( 'cmls/block-vflipcard', {
 		},
 		frontImageSizePercent: {
 			type: 'integer',
-			default: '100'
+			default: '100',
 		},
 		frontColor: {
 			type: 'string',
@@ -82,7 +82,7 @@ registerBlockType( 'cmls/block-vflipcard', {
 		},
 		backImageSizePercent: {
 			type: 'integer',
-			default: '100'
+			default: '100',
 		},
 		backColor: {
 			type: 'string',
