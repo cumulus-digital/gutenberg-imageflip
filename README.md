@@ -1,3 +1,3 @@
-Gutenberg Card Flipper block
+Gutenberg 3d flipping card block
 
-This project was bootstrapped with [Create Guten Block](https://github.com/ahmadawais/create-guten-block).
+Built with @wordpress/scripts
