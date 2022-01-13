@@ -22,7 +22,7 @@ for (let i in rules) {
 		rules[i].test.toString().includes('.svg')
 		&& (
 			!rules[i].issuer
-			|| !rules[i].issuer.includes('jsx')
+			|| !rules[i].issuer.toString().includes('jsx')
 		)
 	) {
 		rules[i].issuer = /\.jsx?$/;

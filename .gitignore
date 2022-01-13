@@ -1,3 +1,7 @@
+# Composer
+vendor/
+!build/composer/vendor/
+
 node_modules/
 *.log
 

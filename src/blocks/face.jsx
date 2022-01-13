@@ -21,7 +21,7 @@ const {
 const {
 	InspectorControls,
 	BlockControls,
-	__experimentalBlockAlignmentMatrixToolbar: BlockAlignmentMatrixToolbar,
+	__experimentalBlockAlignmentMatrixControl: BlockAlignmentMatrixControl,
 	InnerBlocks,
 	useBlockProps,
 	__experimentalUseInnerBlocksProps: useInnerBlocksProps,
@@ -128,7 +128,7 @@ registerBlockType( 'cumulus-gutenberg/imageflip-face', {
 		},
 		contentPosition: {
 			type: 'string',
-			default: 'center',
+			default: 'center center',
 		},
 		borderRadius: {
 			type: 'object',
@@ -216,7 +216,7 @@ registerBlockType( 'cumulus-gutenberg/imageflip-face', {
 			<div { ...blockProps }>
 				<BlockControls group="block">
 					<ToolbarGroup>
-						<BlockAlignmentMatrixToolbar
+						<BlockAlignmentMatrixControl
 							label="Set content container alignment"
 							value={ attributes.contentPosition }
 							onChange={ ( val ) =>

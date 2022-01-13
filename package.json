@@ -18,7 +18,7 @@
     "url": "https://github.com/cumulus-digital/gutenberg-imageflip/issues"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^18.0.0",
+    "@wordpress/scripts": "^19.2.2",
     "bourbon": "^7.0.0",
     "lodash": "^4.17.21",
     "postcss-preset-env": "^6.7.0"
