@@ -1,7 +1,6 @@
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 let defaultConfig = require('./node_modules/@wordpress/scripts/config/webpack.config.js');
 const path = require( 'path' );
-const { unset } = require('lodash');
 
 // Ensure CleanWebpackPlugin doesn't remove composer build dir from php-scoper
 let plugins = defaultConfig.plugins;

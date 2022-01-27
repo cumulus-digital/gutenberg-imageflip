@@ -26,10 +26,11 @@ const {
 	BlockControls,
 	InnerBlocks,
 	useBlockProps,
-	__experimentalUseInnerBlocksProps: useInnerBlocksProps,
+	useInnerBlocksProps,
 	__experimentalLinkControl: LinkControl,
 } = wp.blockEditor;
-const { withState } = wp.compose;
+const { useState } = wp.element;
+//const { withState } = wp.compose;
 
 /*
 const hasSelectedChildren = ( props ) => {
@@ -115,8 +116,9 @@ const imageFlip = registerBlockType( myId, {
 		'cumulus-flipcard/borderRadius': 'childBorderRadius',
 	},
 
-	edit: withState( { showFront: true } )( ( props ) => {
-		const { showFront, attributes, setAttributes, setState } = props;
+	edit: (props) => {
+		const [ showFront, setShowFront ] = useState( true );
+		const { attributes, setAttributes, setState } = props;
 
 		const customClasses = [
 			'crsg-flipcard',
@@ -198,7 +200,7 @@ const imageFlip = registerBlockType( myId, {
 							icon="randomize"
 							title="Flip the card face"
 							onClick={ () =>
-								setState( { showFront: ! showFront } )
+								setShowFront( ! showFront )
 							}
 						>
 							Viewing: { showFront ? 'FRONT' : 'BACK' }
@@ -408,7 +410,7 @@ const imageFlip = registerBlockType( myId, {
 				<div { ...innerBlockProps }>{ innerBlockProps.children }</div>
 			</div>
 		);
-	} ),
+	},
 
 	save: ( props ) => {
 		const { attributes } = props;

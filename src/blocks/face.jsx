@@ -24,11 +24,12 @@ const {
 	__experimentalBlockAlignmentMatrixControl: BlockAlignmentMatrixControl,
 	InnerBlocks,
 	useBlockProps,
-	__experimentalUseInnerBlocksProps: useInnerBlocksProps,
+	useInnerBlocksProps,
 	MediaUpload,
 	MediaUploadCheck,
 	ColorPaletteControl,
 } = wp.blockEditor;
+const { useState } = wp.element;
 const { withState } = wp.compose;
 
 const POSITION_CLASSNAMES = {
@@ -159,7 +160,7 @@ registerBlockType( 'cumulus-gutenberg/imageflip-face', {
 
 	usesContext: [ 'cumulus-flipcard/borderRadius' ],
 
-	edit: withState( { showFront: true } )( ( props ) => {
+	edit: (props) => {
 		const { attributes, context, setAttributes } = props;
 
 		// Set border radius from parent context if it's changed
@@ -471,7 +472,7 @@ registerBlockType( 'cumulus-gutenberg/imageflip-face', {
 				<div { ...innerBlockProps }>{ innerBlockProps.children }</div>
 			</div>
 		);
-	} ),
+	},
 
 	save: ( props ) => {
 		const { attributes } = props;
