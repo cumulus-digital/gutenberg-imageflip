@@ -7,7 +7,7 @@ namespace CRSG\Wordpress\Gutenberg\ImageFlip;
  * Plugin URI: https://github.com/cumulus-digital/gutenberg-imageflip/
  * Description: Image flip card block for Wordpress' Gutenberg
  * Author: vena
- * Version: 2.1.2
+ * Version: 2.1.3
  * Author: vena
  * License: UNLICENSED
  * Requires at least: 5.6
@@ -23,7 +23,8 @@ if ( ! \defined( 'ABSPATH' ) ) {
 }
 
 // Editor Assets
-function editor_assets() {
+function editor_assets()
+{
 	$url = \untrailingslashit( \plugin_dir_url( __FILE__ ) );
 
 	\wp_enqueue_style(
@@ -43,7 +44,8 @@ function editor_assets() {
 \add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\editor_assets' );
 
 // Frontend Assets
-function frontend_assets() {
+function frontend_assets()
+{
 	if ( \has_block( 'cumulus-gutenberg/imageflip' ) && ! \is_admin() ) {
 		$url = \untrailingslashit( \plugin_dir_url( __FILE__ ) );
 
