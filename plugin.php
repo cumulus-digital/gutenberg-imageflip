@@ -7,7 +7,7 @@ namespace CRSG\Wordpress\Gutenberg\ImageFlip;
  * Plugin URI: https://github.com/cumulus-digital/gutenberg-imageflip/
  * Description: Image flip card block for Wordpress' Gutenberg
  * Author: vena
- * Version: 2.1.3
+ * Version: 2.1.4
  * Author: vena
  * License: UNLICENSED
  * Requires at least: 5.6
